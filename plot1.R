@@ -1,8 +1,7 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
-NEI2 <- head(NEI)
-NEI2
-head(SCC)
+head(NEI)
+names(SCC)
 library(lattice)
 library(dplyr)
 filt <- filter(NEI, year %in% c(1999,2002,2005,2008)) %>% select(Emissions, year) %>% 
