@@ -7,7 +7,7 @@ filt3 <- merge(filt1,filt2, by = "SCC") %>% select(Emissions, year) %>% group_by
   summarise(T_Emissions = sum(Emissions)/10^5)
 filt3$year <- as.factor(filt3$year)
 
-png("plot4.png", width=480, height=480)
+png("Plot4.png", width=700, height=700)
 with(filt3,barplot(T_Emissions,names.arg = year,xlab = "year", ylab = "total pm2.5 emissions(10^5 tons)", main ="emissions from coal combustion-related sources across US from 1999-2008"))
 dev.off()
 
